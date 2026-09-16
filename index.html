@@ -464,27 +464,15 @@ footer{border-top:1px solid var(--line);background:var(--soft);padding:28px 24px
       <p>Bạn sẽ cài skill <code>giao-viec-ai</code>, một skill tôi dùng thật trong công việc của mình. Nó làm việc này: bạn giao một việc, AI hiểu ý bạn trước, chưa rõ thì hỏi lại, rồi trình bản xác nhận ghi rõ sẽ làm gì và giao ra cái gì. Bạn đồng ý thì nó mới bắt tay làm.</p>
       <p>Bạn không phải tự tạo thư mục hay tệp. Bạn dán một câu giao việc, AI tải skill về và đặt vào đúng chỗ.</p>
 
-      <h3>Việc 1: Dán câu giao việc cho AI</h3>
-      <p>Mở công cụ AI, đúng thư mục làm việc ở Bước 3. Chép nguyên khối dưới đây, dán vào ô nhắn rồi gửi.</p>
-      <p class="chuachon"><em>Chọn công cụ ở Bước 1 để trang hiện đúng câu giao việc của công cụ bạn dùng.</em></p>
-      <div data-tool="claude" hidden>
-        <pre><code>Cài giúp tôi skill giao-viec-ai.
-Tải tệp SKILL.md từ https://raw.githubusercontent.com/sontyphu/skill-giao-viec-ai/main/SKILL.md
-Lưu vào thư mục skills cá nhân của Claude trên máy tôi, đúng đường dẫn .claude/skills/giao-viec-ai/SKILL.md trong thư mục người dùng.
-Giữ nguyên nội dung tệp, không sửa chữ nào.
-Làm xong báo tôi đường dẫn đầy đủ của tệp.</code></pre>
-      </div>
-      <div data-tool="codex" hidden>
-        <pre><code>Cài giúp tôi skill giao-viec-ai.
-Tải tệp SKILL.md từ https://raw.githubusercontent.com/sontyphu/skill-giao-viec-ai/main/SKILL.md
-Lưu vào thư mục skills cá nhân của Codex trên máy tôi, đúng đường dẫn .agents/skills/giao-viec-ai/SKILL.md trong thư mục người dùng.
-Giữ nguyên nội dung tệp, không sửa chữ nào.
-Làm xong báo tôi đường dẫn đầy đủ của tệp.</code></pre>
-      </div>
-      <p>AI hỏi xin phép tải tệp, tạo thư mục hoặc ghi tệp thì bấm cho phép.</p>
+      <h3>Việc 1: Đưa link kho cho AI</h3>
+      <p>Mở công cụ AI, đúng thư mục làm việc ở Bước 3. Dán hai dòng dưới đây vào ô nhắn rồi gửi. Dùng Claude hay Codex đều dán đúng hai dòng này.</p>
+      <pre><code>https://github.com/sontyphu/skill-giao-viec-ai
+Kiểm tra, xác minh, cài đặt.</code></pre>
+      <p>Trong kho có sẵn phần hướng dẫn viết cho AI đọc. Nó sẽ tải skill về, soi nội dung xem có an toàn không, rồi đặt vào đúng thư mục skill của công cụ bạn đang dùng.</p>
+      <p>AI hỏi xin phép đọc mạng, tạo thư mục hoặc ghi tệp thì bấm cho phép.</p>
       <div class="anh-thieu"><b>Ảnh cần chụp</b>Câu trả lời của AI sau khi cài xong, thấy rõ đường dẫn tệp SKILL.md.</div>
-      <div class="kiem"><p><strong>Kiểm bằng:</strong> AI báo lại đường dẫn tệp, kết thúc bằng <code>giao-viec-ai\SKILL.md</code>.</p></div>
-      <p>Toàn bộ skill và hướng dẫn cài nằm ở kho công khai <a href="https://github.com/sontyphu/skill-giao-viec-ai" target="_blank" rel="noopener">github.com/sontyphu/skill-giao-viec-ai</a>, bạn mở xem bất cứ lúc nào.</p>
+      <div class="kiem"><p><strong>Kiểm bằng:</strong> AI báo lại đường dẫn đầy đủ của tệp, kết thúc bằng <code>giao-viec-ai\SKILL.md</code>, kèm câu lệnh gọi skill.</p></div>
+      <p>Kho công khai <a href="https://github.com/sontyphu/skill-giao-viec-ai" target="_blank" rel="noopener">github.com/sontyphu/skill-giao-viec-ai</a>, bạn mở xem nội dung bất cứ lúc nào.</p>
 
       <h3>Việc 2: Mở tệp ra xem</h3>
       <p>Mở thư mục AI vừa báo, bấm chuột phải vào tệp <code>SKILL.md</code>, chọn mở bằng Notepad (Mac: TextEdit).</p>
@@ -512,7 +500,7 @@ Làm xong báo tôi đường dẫn đầy đủ của tệp.</code></pre>
       <ol class="steps">
         <li><p><strong>Chưa tắt hẳn app.</strong> Thoát hẳn công cụ AI rồi mở lại. Đóng cửa sổ thôi là chưa đủ.</p></li>
         <li><p><strong>Tệp nằm sai chỗ.</strong> Hỏi AI: "Kiểm tra giúp tôi tệp SKILL.md của skill giao-viec-ai đang nằm ở đâu, có đúng thư mục skills cá nhân của công cụ này không." Nằm sai chỗ thì nhờ nó chuyển sang đúng chỗ.</p></li>
-        <li><p><strong>Tệp tải về bị sửa.</strong> Mở tệp xem dòng đầu tiên có đúng là <code>---</code> và dòng thứ hai có đúng <code>name: giao-viec-ai</code> không. Sai thì dán lại câu giao việc ở Việc 1 để tải lại.</p></li>
+        <li><p><strong>Tệp tải về bị sửa.</strong> Mở tệp xem dòng đầu tiên có đúng là <code>---</code> và dòng thứ hai có đúng <code>name: giao-viec-ai</code> không. Sai thì dán lại hai dòng ở Việc 1 để cài lại.</p></li>
         <li><p><strong>Gõ nhầm ký hiệu.</strong> Claude gọi bằng <code>/</code>, Codex gọi bằng <code>$</code>. Gõ nhầm ký hiệu của công cụ kia thì AI không hiểu đó là lệnh gọi skill.</p></li>
       </ol>
 
