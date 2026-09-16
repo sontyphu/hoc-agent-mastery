@@ -13,12 +13,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0f172a; --muted:#475569; --soft-ink:#64748b; --line:#e2e8f0;
-  --primary:#4f46e5; --primary-d:#3730a3; --primary-soft:#eef2ff; --primary-line:#c7d2fe;
-  --accent:#f59e0b; --accent-soft:#fffbeb; --accent-line:#fde68a; --accent-d:#b45309;
-  --ok:#16a34a; --ok-d:#15803d; --ok-soft:#f0fdf4; --ok-line:#86efac;
-  --bg:#ffffff; --soft:#f8fafc; --soft2:#f1f5f9;
-  --radius:14px;
+  --ink:#F5F1EA; --muted:#C5BCAF; --soft-ink:#A69C8E; --line:#3A342C;
+  --primary:#D97757; --primary-d:#E8A184; --primary-soft:rgba(217,119,87,.14); --primary-line:rgba(217,119,87,.40);
+  --accent:#E0A458; --accent-soft:rgba(224,164,88,.14); --accent-line:rgba(224,164,88,.38); --accent-d:#E0A458;
+  --ok:#5FBF7F; --ok-d:#5FBF7F; --ok-soft:rgba(95,191,127,.14); --ok-line:rgba(95,191,127,.38);
+  --bg:#1A1815; --soft:#24211D; --soft2:#2E2A25;
+  --radius:16px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -26,13 +26,13 @@ body{font-family:'Be Vietnam Pro',system-ui,-apple-system,Segoe UI,Roboto,sans-s
 img{max-width:100%;height:auto;display:block}
 [hidden]{display:none !important}
 
-.topbar{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:40}
+.topbar{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:40}
 .topbar .in{max-width:1280px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .brand{font-weight:800;letter-spacing:-.01em;font-size:16px}
 .brand span{color:var(--primary)}
 .chip{margin-left:auto;display:flex;align-items:center;gap:9px;font-size:13px;color:var(--soft-ink);flex-wrap:wrap}
 .chip b{color:var(--primary-d);font-weight:700}
-.chip button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;color:var(--muted);padding:4px 10px;border-radius:7px;cursor:pointer}
+.chip button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:var(--soft2);color:var(--muted);padding:4px 10px;border-radius:7px;cursor:pointer}
 .chip button:hover{border-color:var(--primary);color:var(--primary-d)}
 
 .shell{max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:288px minmax(0,1fr);gap:56px;align-items:start}
@@ -73,7 +73,7 @@ figcaption{margin-top:9px;font-size:14px;color:var(--soft-ink);max-width:560px}
 .logo-row figcaption{margin-top:7px;font-size:13px;font-weight:600;color:var(--ink);text-align:center}
 
 .tablewrap{overflow:auto;margin:22px 0;border:1px solid var(--line);border-radius:var(--radius)}
-table{border-collapse:collapse;width:100%;font-size:15px;min-width:560px;background:#fff}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:560px;background:var(--soft)}
 th,td{padding:11px 14px;text-align:left;vertical-align:top;line-height:1.55}
 th{background:var(--primary-soft);font-weight:700;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;
   color:var(--primary-d);border-bottom:1px solid var(--primary-line);white-space:nowrap}
@@ -97,11 +97,11 @@ td:first-child{color:var(--ink);font-weight:600}
 .loi-son strong{color:#312e81}
 
 .chon-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:14px;margin:22px 0}
-.chon-card{border:2px solid var(--line);border-radius:var(--radius);padding:18px;background:#fff;cursor:pointer;text-align:left;font:inherit;transition:border-color .15s,box-shadow .15s}
+.chon-card{border:2px solid var(--line);border-radius:var(--radius);padding:18px;background:var(--soft);cursor:pointer;text-align:left;font:inherit;transition:border-color .15s,box-shadow .15s}
 .chon-card:hover{border-color:var(--primary-line)}
 .chon-card.dachon{border-color:var(--primary);box-shadow:0 0 0 4px var(--primary-soft)}
 .chon-card .ten{font-size:17px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.chon-card .ten .tick2{display:none;font-size:11.5px;font-weight:700;color:#fff;background:var(--primary);border-radius:999px;padding:2px 9px}
+.chon-card .ten .tick2{display:none;font-size:11.5px;font-weight:700;color:var(--bg);background:var(--primary);border-radius:999px;padding:2px 9px}
 .chon-card.dachon .ten .tick2{display:inline-block}
 .chon-card .aiHop{font-size:13.5px;color:var(--primary-d);font-weight:600;margin:7px 0 6px}
 .chon-card .mo{font-size:14.5px;color:var(--muted);margin:0}
@@ -110,7 +110,7 @@ td:first-child{color:var(--ink);font-weight:600}
 .chuachon{border:1px dashed var(--primary-line);background:var(--primary-soft);border-radius:var(--radius);padding:16px 18px;margin:18px 0;color:var(--primary-d);font-size:15.5px}
 .chuachon a{font-weight:700}
 
-.tick{margin:22px 0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+.tick{margin:22px 0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--soft)}
 .tick .head{background:var(--soft2);padding:13px 16px;font-weight:700;font-size:15px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .tick .dem{margin-left:auto;font-weight:700;color:var(--primary-d);font-size:14px}
 .tick label{display:flex;gap:12px;align-items:flex-start;padding:12px 16px;border-top:1px solid var(--line);cursor:pointer;font-size:15.5px;color:var(--muted)}
@@ -118,13 +118,13 @@ td:first-child{color:var(--ink);font-weight:600}
 .tick input{margin-top:5px;width:17px;height:17px;accent-color:var(--primary);flex:none;cursor:pointer}
 .tick input:checked + span{color:var(--soft-ink);text-decoration:line-through}
 .tick .nut{padding:11px 16px;border-top:1px solid var(--line);background:var(--soft)}
-.tick button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:#fff;color:var(--muted);padding:6px 12px;border-radius:8px;cursor:pointer}
+.tick button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--soft2);color:var(--muted);padding:6px 12px;border-radius:8px;cursor:pointer}
 .tick button:hover{border-color:var(--primary);color:var(--primary-d)}
 
 .steps{counter-reset:s;list-style:none;margin:20px 0 0 0}
 .steps > li{counter-increment:s;position:relative;padding:0 0 20px 44px;border-left:2px solid var(--line);margin:0}
 .steps > li:last-child{border-left-color:transparent;padding-bottom:0}
-.steps > li::before{content:counter(s);position:absolute;left:-14px;top:0;width:26px;height:26px;border-radius:50%;background:var(--primary);color:#fff;font-size:13.5px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.steps > li::before{content:counter(s);position:absolute;left:-14px;top:0;width:26px;height:26px;border-radius:50%;background:var(--primary);color:var(--bg);font-size:13.5px;font-weight:700;display:flex;align-items:center;justify-content:center}
 .steps p{font-size:15.5px;margin-bottom:6px}
 
 footer{border-top:1px solid var(--line);background:var(--soft);padding:28px 24px;text-align:center;font-size:14px;color:var(--soft-ink)}
