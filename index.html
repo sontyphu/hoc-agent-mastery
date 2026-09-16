@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chuẩn bị trước lớp AI Agent Mastery</title>
+<meta name="description" content="Hướng dẫn chuẩn bị trước khi vào học lớp AI Agent Mastery: chọn Claude hoặc Codex, đăng ký tài khoản, cài công cụ, cài Git, rồi cài skill đầu tiên.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0f172a; --muted:#475569; --soft-ink:#64748b; --line:#e2e8f0;
+  --primary:#4f46e5; --primary-d:#3730a3; --primary-soft:#eef2ff; --primary-line:#c7d2fe;
+  --accent:#f59e0b; --accent-soft:#fffbeb; --accent-line:#fde68a; --accent-d:#b45309;
+  --ok:#16a34a; --ok-d:#15803d; --ok-soft:#f0fdf4; --ok-line:#86efac;
+  --bg:#ffffff; --soft:#f8fafc; --soft2:#f1f5f9;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Be Vietnam Pro',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;font-size:16.5px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+[hidden]{display:none !important}
+
+.topbar{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:40}
+.topbar .in{max-width:1280px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{font-weight:800;letter-spacing:-.01em;font-size:16px}
+.brand span{color:var(--primary)}
+.chip{margin-left:auto;display:flex;align-items:center;gap:9px;font-size:13px;color:var(--soft-ink);flex-wrap:wrap}
+.chip b{color:var(--primary-d);font-weight:700}
+.chip button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;color:var(--muted);padding:4px 10px;border-radius:7px;cursor:pointer}
+.chip button:hover{border-color:var(--primary);color:var(--primary-d)}
+
+.shell{max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:288px minmax(0,1fr);gap:56px;align-items:start}
+.toc{position:sticky;top:56px;max-height:calc(100vh - 56px);overflow-y:auto;padding:28px 0 40px}
+.toc summary{display:none}
+.toc .label{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--soft-ink);margin-bottom:12px}
+.toc a{display:block;padding:7px 12px;border-left:2px solid var(--line);color:var(--muted);text-decoration:none;font-size:14.5px;line-height:1.45}
+.toc a:hover{color:var(--primary);background:var(--soft)}
+.toc a.on{color:var(--primary-d);border-left-color:var(--primary);background:var(--primary-soft);font-weight:600}
+
+main{padding:36px 0 110px;max-width:860px;min-width:0}
+.eyebrow{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--primary);background:var(--primary-soft);padding:5px 11px;border-radius:999px;margin-bottom:16px}
+h1{font-size:clamp(29px,4.4vw,42px);line-height:1.2;font-weight:800;letter-spacing:-.02em;margin-bottom:14px}
+.lead{font-size:19px;color:var(--muted)}
+h2{font-size:clamp(22px,3.2vw,29px);font-weight:800;letter-spacing:-.015em;line-height:1.28;margin-bottom:6px}
+h2 .thoiluong{display:block;font-size:13.5px;font-weight:600;color:var(--soft-ink);letter-spacing:0;margin-top:5px}
+h3{font-size:18.5px;font-weight:700;margin:28px 0 10px;line-height:1.35}
+h4{font-size:16.5px;font-weight:700;margin:22px 0 8px}
+section{padding:40px 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:none}
+p{margin-bottom:15px;color:var(--muted)}
+p strong,li strong,td strong{color:var(--ink);font-weight:600}
+ul,ol{margin:0 0 16px 22px;color:var(--muted)}
+li{margin-bottom:9px}
+a{color:var(--primary-d)}
+code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9em;background:var(--soft2);padding:2px 6px;border-radius:5px;color:var(--ink)}
+pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:14px;background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow-x:auto;margin:0 0 15px;line-height:1.6}
+
+figure{margin:18px 0}
+figure img{border:1px solid var(--line);border-radius:10px;background:#fff;max-width:min(100%,520px)}
+figure a{display:inline-block;cursor:zoom-in;line-height:0}
+figcaption{margin-top:9px;font-size:14px;color:var(--soft-ink);max-width:560px}
+.anh-nhom{display:grid;gap:12px;margin:18px 0;justify-items:start}
+.anh-nhom img{border:1px solid var(--line);border-radius:10px;background:#fff;max-width:min(100%,520px)}
+.logo-row{display:flex;gap:22px;flex-wrap:wrap;margin:14px 0 6px}
+.logo-row figure{margin:0;text-align:center;width:96px}
+.logo-row img{width:72px;height:72px;max-width:72px;margin:0 auto;border:1px solid var(--line);border-radius:16px;background:#fff;object-fit:contain}
+.logo-row figcaption{margin-top:7px;font-size:13px;font-weight:600;color:var(--ink);text-align:center}
+
+.tablewrap{overflow:auto;margin:22px 0;border:1px solid var(--line);border-radius:var(--radius)}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:560px;background:#fff}
+th,td{padding:11px 14px;text-align:left;vertical-align:top;line-height:1.55}
+th{background:var(--primary-soft);font-weight:700;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--primary-d);border-bottom:1px solid var(--primary-line);white-space:nowrap}
+td{color:var(--muted);border-top:1px solid var(--line)}
+tbody tr:nth-child(even) td{background:var(--soft)}
+tbody tr:hover td{background:var(--primary-soft)}
+td:first-child{color:var(--ink);font-weight:600}
+
+.kiem{border-left:3px solid var(--ok-line);background:var(--ok-soft);padding:13px 16px;border-radius:0 10px 10px 0;margin:16px 0}
+.kiem p{color:#14532d;margin:0;font-size:15.5px}
+.kiem strong{color:#14532d}
+.callout{border-left:3px solid var(--accent);background:var(--accent-soft);padding:15px 17px;border-radius:0 10px 10px 0;margin:20px 0}
+.callout p{color:var(--accent-d);margin:0 0 10px;font-size:15.5px}
+.callout p:last-child{margin-bottom:0}
+.callout p strong{color:#7c2d12}
+.mac{border-left:3px solid var(--line);background:var(--soft);padding:12px 16px;border-radius:0 10px 10px 0;margin:16px 0;font-size:15px;color:var(--soft-ink)}
+.loi-son{border:1px solid var(--primary-line);background:var(--primary-soft);border-radius:var(--radius);padding:18px 20px;margin:22px 0}
+.loi-son .ai{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--primary-d);margin-bottom:8px}
+.loi-son p{color:var(--primary-d);margin:0 0 10px;font-size:16px}
+.loi-son p:last-child{margin-bottom:0}
+.loi-son strong{color:#312e81}
+
+.chon-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:14px;margin:22px 0}
+.chon-card{border:2px solid var(--line);border-radius:var(--radius);padding:18px;background:#fff;cursor:pointer;text-align:left;font:inherit;transition:border-color .15s,box-shadow .15s}
+.chon-card:hover{border-color:var(--primary-line)}
+.chon-card.dachon{border-color:var(--primary);box-shadow:0 0 0 4px var(--primary-soft)}
+.chon-card .ten{font-size:17px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.chon-card .ten .tick2{display:none;font-size:11.5px;font-weight:700;color:#fff;background:var(--primary);border-radius:999px;padding:2px 9px}
+.chon-card.dachon .ten .tick2{display:inline-block}
+.chon-card .aiHop{font-size:13.5px;color:var(--primary-d);font-weight:600;margin:7px 0 6px}
+.chon-card .mo{font-size:14.5px;color:var(--muted);margin:0}
+.chon-card .khuyen{display:inline-block;font-size:11.5px;font-weight:700;background:var(--accent-soft);color:var(--accent-d);border:1px solid var(--accent-line);padding:2px 9px;border-radius:999px;margin-bottom:9px}
+
+.chuachon{border:1px dashed var(--primary-line);background:var(--primary-soft);border-radius:var(--radius);padding:16px 18px;margin:18px 0;color:var(--primary-d);font-size:15.5px}
+.chuachon a{font-weight:700}
+
+.tick{margin:22px 0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+.tick .head{background:var(--soft2);padding:13px 16px;font-weight:700;font-size:15px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.tick .dem{margin-left:auto;font-weight:700;color:var(--primary-d);font-size:14px}
+.tick label{display:flex;gap:12px;align-items:flex-start;padding:12px 16px;border-top:1px solid var(--line);cursor:pointer;font-size:15.5px;color:var(--muted)}
+.tick label:hover{background:var(--soft)}
+.tick input{margin-top:5px;width:17px;height:17px;accent-color:var(--primary);flex:none;cursor:pointer}
+.tick input:checked + span{color:var(--soft-ink);text-decoration:line-through}
+.tick .nut{padding:11px 16px;border-top:1px solid var(--line);background:var(--soft)}
+.tick button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:#fff;color:var(--muted);padding:6px 12px;border-radius:8px;cursor:pointer}
+.tick button:hover{border-color:var(--primary);color:var(--primary-d)}
+
+.steps{counter-reset:s;list-style:none;margin:20px 0 0 0}
+.steps > li{counter-increment:s;position:relative;padding:0 0 20px 44px;border-left:2px solid var(--line);margin:0}
+.steps > li:last-child{border-left-color:transparent;padding-bottom:0}
+.steps > li::before{content:counter(s);position:absolute;left:-14px;top:0;width:26px;height:26px;border-radius:50%;background:var(--primary);color:#fff;font-size:13.5px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.steps p{font-size:15.5px;margin-bottom:6px}
+
+footer{border-top:1px solid var(--line);background:var(--soft);padding:28px 24px;text-align:center;font-size:14px;color:var(--soft-ink)}
+
+@media (max-width:1000px){
+  .shell{grid-template-columns:1fr;gap:0;padding:0 18px}
+  .toc{position:static;max-height:none;padding:16px 0 0;border-bottom:1px solid var(--line)}
+  .toc summary{display:block;padding:12px 0;font-weight:700;cursor:pointer;font-size:15.5px;list-style:none}
+  .toc summary::-webkit-details-marker{display:none}
+  .toc summary::after{content:"+";float:right;color:var(--primary)}
+  .toc details[open] summary::after{content:"\2013"}
+  .toc .label{display:none}
+  .chip{margin-left:0;width:100%}
+  main{padding:28px 0 80px}
+  body{font-size:16px}
+}
+</style>
+<style>
+.anh-thieu{border:2px dashed var(--accent-line);background:var(--accent-soft);color:var(--accent-d);border-radius:var(--radius);padding:16px 18px;margin:18px 0;font-size:15px}
+.anh-thieu b{display:block;font-weight:700;margin-bottom:4px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="in">
+    <div class="brand">Chuẩn bị trước lớp <span>AI Agent Mastery</span></div>
+    <div class="chip" id="chip" hidden>Công cụ bạn chọn: <b id="chipTen"></b> <button type="button" id="doiCongCu">Đổi công cụ</button></div>
+  </div>
+</div>
+
+<div class="shell">
+
+  <aside class="toc">
+    <details id="tocbox">
+      <summary>Mục lục</summary>
+      <div class="label">Nội dung</div>
+      <nav>
+        <a href="#lam-duoc">Học xong bạn làm được</a>
+        <a href="#tu-hay-gap">Một số từ hay gặp</a>
+        <a href="#cong-cu">Công cụ cần chuẩn bị</a>
+        <a href="#b1">Bước 1: Chọn Claude hay Codex</a>
+        <a href="#b2">Bước 2: Đăng ký tài khoản</a>
+        <a href="#b3">Bước 3: Cài công cụ AI</a>
+        <a href="#b4" id="mucGit">Bước 4: Cài Git</a>
+        <a href="#loi" id="mucLoi">Sửa lỗi hay gặp</a>
+        <a href="#bang-kiem">Bảng kiểm phần cài máy</a>
+        <a href="#bi-ket">Khi bị kẹt</a>
+        <a href="#khai-niem">Skill, Agent và Harness</a>
+        <a href="#cai-skill">Cài skill đầu tiên</a>
+      </nav>
+    </details>
+  </aside>
+
+  <main>
+
+    <div>
+      <span class="eyebrow">Hướng dẫn chuẩn bị</span>
+      <h1>Sẵn sàng dựng bộ skill của riêng bạn</h1>
+      <p class="lead">Hai phần: cài máy gồm 4 bước, khoảng 30 đến 50 phút, rồi cài skill đầu tiên, khoảng 10 phút. Làm một lần trước khi vào Chương 1. Xong là bắt tay dựng skill cho công việc của bạn ngay, không mất thời gian loay hoay cài đặt giữa chừng.</p>
+    </div>
+
+    <section id="lam-duoc">
+      <h2>Học xong chương này bạn làm được</h2>
+      <ul>
+        <li>Có một công cụ AI đã cài trên máy, đăng nhập xong, đọc được tệp trong một thư mục bạn chỉ định.</li>
+        <li>Đã cài skill đầu tiên vào máy và gọi nó chạy đúng.</li>
+        <li>Mở được tệp <code>SKILL.md</code> ra xem, biết một skill trông như thế nào trước khi tự viết skill của mình ở Chương 1.</li>
+      </ul>
+      <div class="callout">
+        <p><strong>Chưa từng tự cài phần mềm bao giờ cũng không sao.</strong> Việc ở đây chủ yếu là: mở trang web, bấm nút tải, mở tệp vừa tải rồi bấm tiếp tục cho tới hết. Chỗ nào cần gõ chữ thì đã có sẵn để bạn chép và dán.</p>
+        <p><strong>Cả khoá dùng hai công cụ: Claude và Codex.</strong> Bạn chọn một trong hai ở Bước 1, trang sẽ tự ẩn phần của công cụ kia đi.</p>
+      </div>
+    </section>
+
+    <section id="tu-hay-gap">
+      <h2>Một số từ hay gặp</h2>
+      <p>Đọc lướt một phút, gặp từ lạ thì quay lại đây.</p>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th style="width:26%">Từ</th><th>Giải nghĩa</th></tr></thead>
+          <tbody>
+            <tr><td>Skill</td><td>Bản hướng dẫn một đầu việc cho AI, nằm trong một thư mục riêng trên máy bạn.</td></tr>
+            <tr><td>SKILL.md</td><td>Tệp chính của mỗi skill. Phần đầu ghi tên và khi nào dùng, phần sau ghi các bước AI phải làm.</td></tr>
+            <tr><td>Agent</td><td>AI xử lý trọn một quy trình nhiều bước, học ở Chương 3.</td></tr>
+            <tr><td>Harness</td><td>Bộ quy tắc chung cho cả hệ thống AI, học ở Chương 5.</td></tr>
+            <tr><td>Thư mục làm việc</td><td>Thư mục bạn chỉ cho AI đọc và ghi tệp trong đó.</td></tr>
+            <tr><td>Terminal / PowerShell</td><td>Cửa sổ để gõ lệnh bằng chữ, nền đen. Windows gọi là PowerShell, Mac gọi là Terminal. Mở nó ra: Windows bấm phím cửa sổ rồi gõ PowerShell; Mac bấm Command và phím cách rồi gõ Terminal.</td></tr>
+            <tr><td>Git</td><td>Công cụ ghi nhớ lại từng bước thay đổi tệp. Claude cần nó mới dám sửa tệp thật trên máy bạn.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="cong-cu">
+      <h2>Công cụ cần chuẩn bị</h2>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Công cụ</th><th style="width:16%">Bắt buộc</th><th style="width:22%">Chi phí</th><th style="width:22%">Nơi tải, đăng ký</th></tr></thead>
+          <tbody>
+            <tr><td>1 công cụ AI, chọn 1 trong 2: Claude hoặc Codex</td><td>Có</td><td>Khoảng 500.000đ mỗi tháng (20 đô)</td><td>claude.ai · chatgpt.com</td></tr>
+            <tr><td>Git</td><td>Chỉ khi chọn Claude</td><td>Miễn phí</td><td>git-scm.com</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Yêu cầu máy tối thiểu:</strong> máy tính Windows hoặc Mac, không học được trên điện thoại. Claude cần Windows 10 bản 1809 trở lên hoặc macOS 13 trở lên, tối thiểu 4 GB RAM.</p>
+      <div class="callout">
+        <p><strong>Cần chuẩn bị sẵn một thứ:</strong> thẻ thanh toán quốc tế Visa hoặc Mastercard, để đăng ký tài khoản ở Bước 2. Chưa có thẻ thì đọc phần lưu ý ở Bước 2, có cách xử lý.</p>
+        <p><strong>Lưu ý tiết kiệm:</strong> nếu bạn đã có sẵn tài khoản ChatGPT Plus, bạn dùng được Codex ngay, không cần mua thêm gì.</p>
+      </div>
+      <p>Chi phí công cụ là tiền trả cho hãng công cụ, <strong>tách riêng với học phí lớp</strong>.</p>
+    </section>
+
+    <section id="b1">
+      <h2>Bước 1: Chọn Claude hay Codex<span class="thoiluong">Chọn xong trang tự ẩn công cụ kia đi - 3 phút</span></h2>
+      <p>Bạn chỉ cài <strong>một</strong> công cụ. Hai công cụ đều chạy được skill theo cùng một kiểu tệp <code>SKILL.md</code>, nên skill bạn viết trong khoá dùng được ở cả hai.</p>
+      <div class="logo-row">
+        <img src="anh/image46.jpg" alt="Biểu tượng Claude" loading="lazy">
+        <img src="anh/image53.jpg" alt="Biểu tượng Codex" loading="lazy">
+      </div>
+      <div class="chon-hai">
+        <button type="button" class="chon-card" data-pick="claude">
+          <span class="khuyen">Tôi khuyên dùng</span>
+          <div class="ten">Claude <span class="tick2">Đang chọn</span></div>
+          <div class="aiHop">Hợp với: muốn dùng AI mạnh nhất hiện tại</div>
+          <p class="mo">Đây là công cụ tôi dùng hằng ngày để chạy bộ skill và Agent của mình. Cần cài thêm Git.</p>
+        </button>
+        <button type="button" class="chon-card" data-pick="codex">
+          <div class="ten">Codex <span class="tick2">Đang chọn</span></div>
+          <div class="aiHop">Hợp với: đã có sẵn tài khoản ChatGPT Plus</div>
+          <p class="mo">Tận dụng luôn tài khoản đang trả, không tốn thêm đồng nào, không phải cài Git.</p>
+        </button>
+      </div>
+      <p>Đổi công cụ sau này cũng không mất gì: skill là các tệp nằm trên máy bạn, không nằm trong công cụ.</p>
+      <div class="kiem"><p><strong>Kiểm bằng:</strong> bạn chốt được một trong hai công cụ, và nói được vì sao mình chọn nó.</p></div>
+    </section>
+
+    <section id="b2">
+      <h2>Bước 2: Đăng ký tài khoản trả phí<span class="thoiluong">10 phút</span></h2>
+      <p>Công cụ AI cần bản trả phí mới đủ sức làm việc thật. Bản miễn phí dùng một lúc là bị chặn ngang giữa chừng.</p>
+      <p class="chuachon"><em>Chọn công cụ ở Bước 1 để trang chỉ hiện phần bạn cần làm.</em></p>
+
+      <div data-tool="claude" hidden>
+        <h3>Đăng ký tài khoản Claude</h3>
+        <ol class="steps">
+          <li><p>Vào <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>, tạo tài khoản. Đăng nhập bằng Google cho nhanh.</p></li>
+          <li><p>Nâng lên gói <strong>Pro</strong>, khoảng 20 đô mỗi tháng.</p></li>
+        </ol>
+        <div class="anh-thieu"><b>Ảnh cần chụp</b>Trang thanh toán của claude.ai đang hiện gói Pro ở trạng thái đang chạy. Chụp trên tài khoản sạch, che email.</div>
+      </div>
+
+      <div data-tool="codex" hidden>
+        <h3>Đăng ký tài khoản ChatGPT</h3>
+        <ol class="steps">
+          <li><p>Vào <a href="https://chatgpt.com" target="_blank" rel="noopener">chatgpt.com</a>, tạo tài khoản.</p></li>
+          <li><p>Nâng lên gói <strong>Plus</strong>, khoảng 20 đô mỗi tháng. Đã có Plus rồi thì bỏ qua bước này.</p></li>
+        </ol>
+      </div>
+
+      <div class="callout">
+        <p><strong>Lưu ý thẻ thanh toán, quan trọng ở Việt Nam.</strong> Cả hai công cụ đều thu tiền bằng thẻ quốc tế Visa hoặc Mastercard. Thẻ thường bị từ chối thì dùng <strong>thẻ ghi nợ quốc tế</strong> hoặc <strong>thẻ Visa ảo</strong> mà nhiều ngân hàng cấp ngay trên app: Techcombank, VPBank, TPBank, MB. Hoặc nhờ người quen có thẻ quốc tế trả hộ.</p>
+        <p>Chưa thanh toán được ngay thì vẫn cứ làm tiếp Bước 3 để cài phần mềm trước. Cố gắng có tài khoản trả phí trước khi vào Chương 1.</p>
+      </div>
+      <div class="kiem"><p><strong>Kiểm bằng:</strong> đăng nhập lại trang web của công cụ, vào mục thanh toán thấy gói Pro hoặc Plus đang hoạt động, không còn là gói miễn phí.</p></div>
+    </section>
+
+    <section id="b3">
+      <h2>Bước 3: Cài công cụ AI và mở thư mục làm việc<span class="thoiluong">15 đến 20 phút</span></h2>
+      <p>Trước khi cài, tạo sẵn một thư mục trống để làm việc cho cả khoá, đặt ở ổ D hoặc ổ E cho máy chạy nhẹ, ví dụ <code>D:\Agent-Mastery</code>. Cả khoá bạn làm việc trong thư mục này.</p>
+      <p class="chuachon"><em>Chọn công cụ ở Bước 1 để trang chỉ hiện phần bạn cần làm.</em></p>
+
+      <div data-tool="claude" hidden>
+        <h3>Cài Claude</h3>
+        <ol class="steps">
+          <li>
+            <p>Vào <a href="https://claude.com/product/claude-code" target="_blank" rel="noopener">claude.com/product/claude-code</a>, bấm nút tải đúng máy bạn. Nút đen Download for Windows; máy Mac thì trang tự đổi thành bản macOS.</p>
+            <figure><img src="anh/image24.jpg" alt="Trang Claude Code với nút Download for Windows" loading="lazy"></figure>
+          </li>
+          <li><p>Cài như phần mềm thường, bấm tiếp tục cho tới hết.</p></li>
+          <li>
+            <p>Mở app, đăng nhập bằng tài khoản đã đăng ký ở Bước 2.</p>
+            <figure><img src="anh/image52.jpg" alt="Màn hình Claude sau khi đăng nhập" loading="lazy"></figure>
+          </li>
+          <li>
+            <p>Bấm tab <strong>Code</strong> (cạnh Chat và Cowork), chọn <strong>Local</strong>, bấm <strong>Select folder</strong> rồi chọn thư mục làm việc bạn vừa tạo. Nếu bấm Code mà app hỏi nâng gói, nghĩa là bạn cần hoàn tất gói Pro ở Bước 2 trước.</p>
+            <div class="anh-thieu"><b>Ảnh cần chụp</b>Tab Code sau khi đã chọn thư mục làm việc, thấy rõ tên thư mục ở thanh trên. Chụp trên một thư mục mẫu sạch, không lộ tên khách hay tên tài khoản công ty.</div>
+          </li>
+        </ol>
+        <div class="kiem"><p><strong>Kiểm bằng:</strong> ở tab Code, hỏi AI "Thư mục này có những tệp gì?" và AI trả lời được. Thư mục mới tạo thì nó báo đang trống.</p></div>
+        <p>Cài bị báo lỗi thì kéo xuống mục <a href="#loi">Sửa lỗi hay gặp</a>.</p>
+      </div>
+
+      <div data-tool="codex" hidden>
+        <h3>Cài Codex bản app</h3>
+        <p>Tải đúng app có biểu tượng, không phải bản dòng lệnh.</p>
+        <ol class="steps">
+          <li>
+            <p>Vào <a href="https://chatgpt.com/codex" target="_blank" rel="noopener">chatgpt.com/codex</a>, bấm tải xuống đúng bản máy bạn.</p>
+            <figure><img src="anh/image38.jpg" alt="Trang tải Codex với nút Tải xuống cho Windows" loading="lazy"></figure>
+          </li>
+          <li>
+            <p>Tải xong, trên máy có tệp tên ChatGPT Installer, thường nằm ở màn hình nền hoặc thư mục Tải xuống. Bấm đúp vào nó.</p>
+            <figure><img src="anh/image10.jpg" alt="Biểu tượng ChatGPT Installer vừa tải về" loading="lazy"></figure>
+          </li>
+          <li>
+            <p>Đợi chạy tới 100%. Cửa sổ Microsoft Store hiện ra và tự tải, bạn không phải bấm gì thêm. Đừng bấm Cancel.</p>
+            <figure><img src="anh/image16.jpg" alt="Microsoft Store đang tải ChatGPT" loading="lazy"></figure>
+          </li>
+          <li>
+            <p>Chạy xong, bấm Continue to sign in rồi đăng nhập bằng chính tài khoản ChatGPT của bạn.</p>
+            <figure><img src="anh/image27.jpg" alt="Màn hình Sign in to ChatGPT" loading="lazy"></figure>
+          </li>
+          <li>
+            <p>Đăng nhập xong nó hỏi vài câu khảo sát. Chọn nhanh cũng được rồi bấm Continue. Thấy nút bỏ qua thì cứ bấm.</p>
+            <figure><img src="anh/image5.jpg" alt="Màn hình khảo sát hỏi công việc của bạn" loading="lazy"></figure>
+          </li>
+          <li>
+            <p>Máy hỏi cấp quyền thì bấm Yes.</p>
+            <figure><img src="anh/image41.jpg" alt="Hộp thoại Windows hỏi cấp quyền cho ChatGPT" loading="lazy"></figure>
+          </li>
+          <li>
+            <p>Dùng công tắc <strong>Chat / Work</strong> ngay phía trên ô nhắn để chuyển sang chế độ <strong>Work</strong>. Đây là chế độ chạy Codex.</p>
+            <div class="anh-thieu"><b>Ảnh cần chụp</b>Công tắc Chat/Work phía trên ô nhắn, đang gạt sang Work.</div>
+          </li>
+          <li>
+            <p>Ở màn hình Choose where to work, chọn open a folder rồi trỏ vào thư mục làm việc bạn vừa tạo.</p>
+            <div class="anh-thieu"><b>Ảnh cần chụp</b>Màn hình Choose where to work của Codex, thấy mục open a folder.</div>
+          </li>
+        </ol>
+        <div class="kiem"><p><strong>Kiểm bằng:</strong> công tắc đang ở Work, hỏi AI "Thư mục này có những tệp gì?" và AI trả lời được.</p></div>
+      </div>
+    </section>
+
+    <section id="b4" data-tool="claude" hidden>
+      <h2>Bước 4: Cài Git<span class="thoiluong">Chỉ khi chọn Claude - 5 phút</span></h2>
+      <p>Claude bắt buộc phải có Git mới làm việc được trên thư mục thật của bạn. Thiếu nó, bạn sẽ gặp dòng chữ đỏ "Git is required for local sessions".</p>
+      <ol class="steps">
+        <li>
+          <p><strong>Kiểm tra đã có chưa.</strong> Mở PowerShell (Mac: Terminal), gõ:</p>
+          <pre><code>git --version</code></pre>
+          <p>Hiện ra một dòng bắt đầu bằng <code>git version 2</code> là máy đã có sẵn, bỏ qua phần cài.</p>
+          <div class="anh-thieu"><b>Ảnh cần chụp</b>Cửa sổ PowerShell chạy lệnh git --version ra dòng phiên bản.</div>
+        </li>
+        <li><p><strong>Cài Git cho Windows.</strong> Vào <a href="https://git-scm.com" target="_blank" rel="noopener">git-scm.com</a>, bấm nút Git for Windows/x64 Setup, tải bản 64-bit. Chạy tệp cài, cứ bấm tiếp tục cho tới hết, không cần đổi gì. Máy Mac thường có sẵn Git.</p></li>
+        <li>
+          <p><strong>Tắt hẳn Claude rồi mở lại.</strong> Bấm chuột phải vào biểu tượng Claude dưới khay đồng hồ rồi chọn Quit. Đóng cửa sổ thôi là chưa đủ.</p>
+          <figure><img src="anh/image58.jpg" alt="Menu chuột phải biểu tượng Claude dưới khay đồng hồ, có mục Quit" loading="lazy"></figure>
+        </li>
+      </ol>
+      <div class="kiem"><p><strong>Kiểm bằng:</strong> mở PowerShell mới, gõ <code>git --version</code>, hiện ra một dòng bắt đầu bằng <code>git version 2</code>.</p></div>
+    </section>
+
+    <section id="loi" data-tool="claude" hidden>
+      <h2>Sửa lỗi hay gặp</h2>
+      <p>Ba lỗi dưới đây xảy ra khi cài Claude trên Windows. Máy nào cũng có thể dính, không phải bạn làm sai.</p>
+
+      <h3>Lỗi 1: Administrator access is required, install without Cowork</h3>
+      <figure><img src="anh/image11.jpg" alt="Hộp thoại Claude Setup báo cần quyền Administrator" loading="lazy"></figure>
+      <p>Hộp thoại này chỉ có một nút OK, là thông báo chứ không phải cho bạn chọn. Claude có kèm một tính năng phụ tên Cowork, cần quyền quản trị của Windows mới cài được. Lớp mình chưa cần Cowork.</p>
+      <ol class="steps">
+        <li><p>Bấm OK.</p></li>
+        <li><p>Mở lại tệp cài Claude.</p></li>
+        <li><p>Nếu có lựa chọn Install without Cowork thì chọn mục này.</p></li>
+        <li><p>Tiếp tục cài đặt bình thường.</p></li>
+      </ol>
+      <p>Nếu vẫn muốn cài đầy đủ luôn: tắt cửa sổ cài, bấm chuột phải vào tệp cài, chọn Run as administrator, Windows hỏi quyền thì bấm Yes, rồi cài lại.</p>
+      <figure><img src="anh/image3.jpg" alt="Menu chuột phải với mục Run as administrator" loading="lazy"></figure>
+
+      <h3>Lỗi 2: Installation failed, AddPackage failed HRESULT 0x80073CFF</h3>
+      <figure><img src="anh/image15.jpg" alt="Hộp thoại Claude Setup báo Installation failed" loading="lazy"></figure>
+      <p>Làm theo thứ tự tới khi hết lỗi.</p>
+      <p><strong>Cách 1 - Bật Developer Mode.</strong> Bấm phím cửa sổ, gõ Developer Mode, chọn kết quả đầu tiên, gạt công tắc sang bật, rồi cài lại Claude.</p>
+      <figure>
+        <div class="anh-nhom">
+          <img src="anh/image30.jpg" alt="Tìm Developer Mode trong Start Menu" loading="lazy">
+          <img src="anh/image21.jpg" alt="Công tắc Developer Mode" loading="lazy">
+        </div>
+      </figure>
+      <p><strong>Cách 2 - Vẫn lỗi nghĩa là còn bản cài cũ.</strong> Bấm phím cửa sổ, gõ Installed apps, tìm Claude, bấm dấu ba chấm rồi chọn Uninstall. Khởi động lại máy và cài lại từ đầu.</p>
+      <figure>
+        <div class="anh-nhom">
+          <img src="anh/image6.jpg" alt="Tìm Installed apps trong Start Menu" loading="lazy">
+          <img src="anh/image55.jpg" alt="Mục Installed apps trong phần Apps" loading="lazy">
+          <img src="anh/image12.jpg" alt="Menu gỡ cài đặt Claude" loading="lazy">
+        </div>
+      </figure>
+      <p><strong>Cách 3 - Vẫn lỗi nữa:</strong> chuyển tạm sang Codex nếu bạn có tài khoản ChatGPT Plus, để không mất thời gian. Quay lại thử Claude sau cũng được.</p>
+
+      <h3>Lỗi 3: Dòng chữ đỏ "Git is required for local sessions"</h3>
+      <figure><img src="anh/image48.jpg" alt="Claude báo dòng đỏ Git is required for local sessions" loading="lazy"></figure>
+      <p>Máy chưa cài Git hoặc cài chưa xong.</p>
+      <ol class="steps">
+        <li><p>Cài Git theo Bước 4.</p></li>
+        <li><p>Tắt hẳn Claude, chuột phải biểu tượng dưới khay đồng hồ rồi chọn Quit, sau đó mở lại.</p></li>
+        <li><p>Mở PowerShell gõ <code>git --version</code>, hiện dòng bắt đầu bằng <code>git version 2</code> là xong.</p></li>
+        <li><p>Đã cài mà vẫn báo lỗi: khởi động lại máy một lần rồi mở lại Claude.</p></li>
+      </ol>
+    </section>
+
+    <section id="bang-kiem">
+      <h2>Bảng kiểm phần cài máy</h2>
+      <p>Tick dần khi làm xong từng việc. Máy tự nhớ, đóng trang mở lại vẫn còn.</p>
+      <div class="tick" id="ticklist">
+        <div class="head"><span>Việc cần làm</span><span class="dem" id="dem">0/4 xong</span></div>
+        <label><input type="checkbox" data-k="s1"><span>Bước 1 - Đã chọn Claude hoặc Codex</span></label>
+        <label><input type="checkbox" data-k="s2"><span>Bước 2 - Đã đăng ký tài khoản trả phí, thấy gói đang hoạt động</span></label>
+        <label><input type="checkbox" data-k="s3"><span>Bước 3 - Công cụ AI đã cài, đã mở thư mục làm việc, hỏi được AI về tệp trong thư mục</span></label>
+        <label><input type="checkbox" data-k="s4"><span>Bước 4 - Git đã cài, gõ git --version ra số <em>(bỏ qua nếu dùng Codex)</em></span></label>
+        <div class="nut"><button type="button" id="xoatick">Xóa hết dấu tick</button></div>
+      </div>
+      <p>Đủ dấu tick là máy bạn đã sẵn sàng. Phần tiếp theo là cài skill đầu tiên.</p>
+    </section>
+
+    <section id="bi-ket">
+      <h2>Khi bị kẹt</h2>
+      <p>Đây là phần kỹ thuật nên kẹt là bình thường, đừng ngại. Làm theo thứ tự sau.</p>
+      <ol class="steps">
+        <li><p><strong>Hỏi chính công cụ AI của bạn hoặc ChatGPT trước</strong>, đây là cách nhanh nhất. Mô tả đúng bạn đang làm bước nào, máy Windows hay Mac, nó báo lỗi gì. Chụp được màn hình lỗi thì gửi luôn ảnh kèm câu hỏi.</p></li>
+        <li><p><strong>Vẫn chưa hết kẹt:</strong> chụp màn hình chỗ báo lỗi, gửi vào nhóm học viên, ghi rõ bạn đang làm bước mấy, dùng Claude hay Codex, máy Windows hay Mac, nó báo gì.</p></li>
+      </ol>
+    </section>
+
+    <section id="khai-niem">
+      <h2>Skill, Agent và Harness là gì</h2>
+      <p>Máy đã sẵn sàng. Từ đây là phần bạn sẽ làm suốt cả khoá. Cả khoá xoay quanh ba khái niệm:</p>
+      <ul>
+        <li><strong>Skill</strong> - một bản hướng dẫn công việc bạn viết sẵn cho AI. AI đọc nó rồi làm đúng trình tự, đúng tiêu chuẩn của bạn, không phải giải thích lại mỗi lần.</li>
+        <li><strong>Agent</strong> - AI xử lý trọn một quy trình gồm nhiều bước, dùng nhiều skill nối với nhau, có điểm dừng chờ bạn duyệt.</li>
+        <li><strong>Harness</strong> - bộ quy tắc chung cho cả hệ thống: AI được làm gì, không được làm gì, phải kiểm chứng ra sao trước khi trả kết quả.</li>
+      </ul>
+      <p>Chương 0 dừng ở chỗ cài một skill có sẵn và thấy nó chạy. Tự viết skill bắt đầu từ Chương 1.</p>
+      <p>Nguyên tắc xuyên suốt khoá: <strong>AI làm, bạn duyệt.</strong> Bạn không cần biết lập trình, chỉ cần mô tả việc mình muốn bằng tiếng Việt.</p>
+    </section>
+
+    <section id="cai-skill">
+      <h2>Cài skill đầu tiên<span class="thoiluong">10 phút</span></h2>
+      <p>Bạn sẽ cài skill <code>giao-viec-ai</code>, một skill tôi dùng thật trong công việc của mình. Nó làm việc này: bạn giao một việc, AI hiểu ý bạn trước, chưa rõ thì hỏi lại, rồi trình bản xác nhận ghi rõ sẽ làm gì và giao ra cái gì. Bạn đồng ý thì nó mới bắt tay làm.</p>
+      <p>Bạn không phải tự tạo thư mục hay tệp. Bạn dán một câu giao việc, AI tải skill về và đặt vào đúng chỗ.</p>
+
+      <h3>Việc 1: Dán câu giao việc cho AI</h3>
+      <p>Mở công cụ AI, đúng thư mục làm việc ở Bước 3. Chép nguyên khối dưới đây, dán vào ô nhắn rồi gửi.</p>
+      <p class="chuachon"><em>Chọn công cụ ở Bước 1 để trang hiện đúng câu giao việc của công cụ bạn dùng.</em></p>
+      <div data-tool="claude" hidden>
+        <pre><code>Cài giúp tôi skill giao-viec-ai.
+Tải tệp SKILL.md từ https://raw.githubusercontent.com/sontyphu/skill-giao-viec-ai/main/SKILL.md
+Lưu vào thư mục skills cá nhân của Claude trên máy tôi, đúng đường dẫn .claude/skills/giao-viec-ai/SKILL.md trong thư mục người dùng.
+Giữ nguyên nội dung tệp, không sửa chữ nào.
+Làm xong báo tôi đường dẫn đầy đủ của tệp.</code></pre>
+      </div>
+      <div data-tool="codex" hidden>
+        <pre><code>Cài giúp tôi skill giao-viec-ai.
+Tải tệp SKILL.md từ https://raw.githubusercontent.com/sontyphu/skill-giao-viec-ai/main/SKILL.md
+Lưu vào thư mục skills cá nhân của Codex trên máy tôi, đúng đường dẫn .agents/skills/giao-viec-ai/SKILL.md trong thư mục người dùng.
+Giữ nguyên nội dung tệp, không sửa chữ nào.
+Làm xong báo tôi đường dẫn đầy đủ của tệp.</code></pre>
+      </div>
+      <p>AI hỏi xin phép tải tệp, tạo thư mục hoặc ghi tệp thì bấm cho phép.</p>
+      <div class="anh-thieu"><b>Ảnh cần chụp</b>Câu trả lời của AI sau khi cài xong, thấy rõ đường dẫn tệp SKILL.md.</div>
+      <div class="kiem"><p><strong>Kiểm bằng:</strong> AI báo lại đường dẫn tệp, kết thúc bằng <code>giao-viec-ai\SKILL.md</code>.</p></div>
+      <p>Toàn bộ skill và hướng dẫn cài nằm ở kho công khai <a href="https://github.com/sontyphu/skill-giao-viec-ai" target="_blank" rel="noopener">github.com/sontyphu/skill-giao-viec-ai</a>, bạn mở xem bất cứ lúc nào.</p>
+
+      <h3>Việc 2: Mở tệp ra xem</h3>
+      <p>Mở thư mục AI vừa báo, bấm chuột phải vào tệp <code>SKILL.md</code>, chọn mở bằng Notepad (Mac: TextEdit).</p>
+      <p>Nhìn qua cấu trúc: phần giữa hai dòng <code>---</code> ở đầu là <strong>tên và khi nào dùng</strong>, phần bên dưới là <strong>các bước và luật</strong> AI phải theo. Chương 1 bạn sẽ viết một tệp giống hệt cấu trúc này cho công việc của chính bạn.</p>
+      <p>Thư mục <code>.claude</code> hoặc <code>.agents</code> có dấu chấm đầu tên nên máy có thể ẩn đi. Không thấy thì dán thẳng đường dẫn AI báo vào thanh địa chỉ của cửa sổ thư mục.</p>
+      <div class="anh-thieu"><b>Ảnh cần chụp</b>Tệp SKILL.md mở bằng Notepad, thấy phần đầu tệp có dòng name: giao-viec-ai.</div>
+      <div class="kiem"><p><strong>Kiểm bằng:</strong> mở được tệp, thấy dòng <code>name: giao-viec-ai</code> ở đầu.</p></div>
+
+      <h3>Việc 3: Gọi skill chạy thử</h3>
+      <p>Tắt hẳn công cụ AI rồi mở lại, để nó nạp skill mới. Mở đúng thư mục làm việc, rồi gửi câu dưới đây.</p>
+      <div data-tool="claude" hidden>
+        <pre><code>/giao-viec-ai viết lại yêu cầu này cho rõ: làm slide chuyên nghiệp hơn</code></pre>
+        <p>Mẹo: gõ riêng dấu <code>/</code> vào ô nhắn là hiện danh sách skill đang có. Thấy <code>giao-viec-ai</code> trong danh sách nghĩa là công cụ đã nhận skill.</p>
+        <div class="anh-thieu"><b>Ảnh cần chụp</b>Danh sách skill hiện ra khi gõ dấu gạch chéo trong Claude, có dòng giao-viec-ai.</div>
+      </div>
+      <div data-tool="codex" hidden>
+        <pre><code>$giao-viec-ai viết lại yêu cầu này cho rõ: làm slide chuyên nghiệp hơn</code></pre>
+        <p>Mẹo: gõ riêng dấu <code>$</code> vào ô nhắn là hiện danh sách skill đang có. Thấy <code>giao-viec-ai</code> trong danh sách nghĩa là công cụ đã nhận skill.</p>
+        <div class="anh-thieu"><b>Ảnh cần chụp</b>Danh sách skill hiện ra khi gõ dấu đô la trong Codex, có dòng giao-viec-ai.</div>
+      </div>
+      <div class="anh-thieu"><b>Ảnh cần chụp</b>Bản xác nhận skill trả về, thấy đủ các mục Tên việc, Mục tiêu, Yêu cầu thực hiện, Đầu ra cần bàn giao, Tiêu chuẩn đạt và câu hỏi xin phép bắt đầu.</div>
+      <div class="kiem"><p><strong>Kiểm bằng:</strong> AI hỏi lại bạn những điều còn thiếu, hoặc trình bản xác nhận đủ các mục Tên việc, Mục tiêu, Yêu cầu thực hiện, Đầu ra cần bàn giao, Tiêu chuẩn đạt, rồi dừng lại hỏi bạn có đồng ý để bắt đầu làm không. Nó dừng chờ bạn thay vì làm luôn, nghĩa là skill đã chạy.</p></div>
+
+      <h3>Gọi skill mà AI không nhận, hoặc làm luôn không trình bản xác nhận</h3>
+      <ol class="steps">
+        <li><p><strong>Chưa tắt hẳn app.</strong> Thoát hẳn công cụ AI rồi mở lại. Đóng cửa sổ thôi là chưa đủ.</p></li>
+        <li><p><strong>Tệp nằm sai chỗ.</strong> Hỏi AI: "Kiểm tra giúp tôi tệp SKILL.md của skill giao-viec-ai đang nằm ở đâu, có đúng thư mục skills cá nhân của công cụ này không." Nằm sai chỗ thì nhờ nó chuyển sang đúng chỗ.</p></li>
+        <li><p><strong>Tệp tải về bị sửa.</strong> Mở tệp xem dòng đầu tiên có đúng là <code>---</code> và dòng thứ hai có đúng <code>name: giao-viec-ai</code> không. Sai thì dán lại câu giao việc ở Việc 1 để tải lại.</p></li>
+        <li><p><strong>Gõ nhầm ký hiệu.</strong> Claude gọi bằng <code>/</code>, Codex gọi bằng <code>$</code>. Gõ nhầm ký hiệu của công cụ kia thì AI không hiểu đó là lệnh gọi skill.</p></li>
+      </ol>
+
+      <div class="callout">
+        <p>Cài xong skill và gọi chạy được là bạn đã sẵn sàng. Xong thì vào học Chương 1.</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+(function(){
+  var box = document.getElementById('tocbox');
+  var mq = window.matchMedia('(min-width:1001px)');
+  function sync(){ if(mq.matches){ box.setAttribute('open',''); } }
+  sync();
+  if(mq.addEventListener){ mq.addEventListener('change', sync); } else { mq.addListener(sync); }
+  var links = Array.prototype.slice.call(document.querySelectorAll('.toc nav a'));
+  var map = {};
+  links.forEach(function(a){
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if(el){ map[el.id] = a; }
+  });
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(a){ a.classList.remove('on'); });
+        if(map[e.target.id]){ map[e.target.id].classList.add('on'); }
+      }
+    });
+  }, { rootMargin: '-70px 0px -75% 0px', threshold: 0 });
+  Object.keys(map).forEach(function(id){ obs.observe(document.getElementById(id)); });
+  links.forEach(function(a){
+    a.addEventListener('click', function(){ if(!mq.matches){ box.removeAttribute('open'); } });
+  });
+
+  document.querySelectorAll('figure img, .anh-nhom img').forEach(function(im){
+    if(im.closest('.logo-row')) { return; }
+    if(im.parentElement && im.parentElement.tagName === 'A') { return; }
+    var a = document.createElement('a');
+    a.href = im.getAttribute('src');
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.title = 'Bấm để xem ảnh to';
+    im.parentNode.insertBefore(a, im);
+    a.appendChild(im);
+  });
+
+  var TEN = { claude:'Claude', codex:'Codex' };
+  var KEY_TOOL = 'agentmastery-congcu';
+  var chip = document.getElementById('chip');
+  var chipTen = document.getElementById('chipTen');
+  var mucLoi = document.getElementById('mucLoi');
+  var mucGit = document.getElementById('mucGit');
+
+  function apDung(t){
+    document.querySelectorAll('[data-tool]').forEach(function(el){
+      el.hidden = (el.dataset.tool !== t);
+    });
+    document.querySelectorAll('.chuachon').forEach(function(el){ el.hidden = !!t; });
+    document.querySelectorAll('.chon-card').forEach(function(c){
+      c.classList.toggle('dachon', c.dataset.pick === t);
+    });
+    chip.hidden = !t;
+    if(t){ chipTen.textContent = TEN[t]; }
+    if(mucLoi){ mucLoi.hidden = (t !== 'claude'); }
+    if(mucGit){ mucGit.hidden = (t !== 'claude'); }
+  }
+
+  var daChon = null;
+  try { daChon = localStorage.getItem(KEY_TOOL); } catch(e){}
+  if(!TEN[daChon]){ daChon = null; }
+  apDung(daChon);
+
+  document.querySelectorAll('.chon-card').forEach(function(c){
+    c.addEventListener('click', function(){
+      var t = c.dataset.pick;
+      try { localStorage.setItem(KEY_TOOL, t); } catch(e){}
+      apDung(t);
+      var b2 = document.getElementById('b2');
+      if(b2){ window.scrollTo({ top: b2.getBoundingClientRect().top + window.scrollY - 70, behavior:'smooth' }); }
+    });
+  });
+  document.getElementById('doiCongCu').addEventListener('click', function(){
+    try { localStorage.removeItem(KEY_TOOL); } catch(e){}
+    apDung(null);
+    var b1 = document.getElementById('b1');
+    if(b1){ window.scrollTo({ top: b1.getBoundingClientRect().top + window.scrollY - 70, behavior:'smooth' }); }
+  });
+
+  var KEY = 'agentmastery-chuanbi';
+  var oS = document.querySelectorAll('#ticklist input[type=checkbox]');
+  var dem = document.getElementById('dem');
+  var luu = {};
+  try { luu = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){ luu = {}; }
+  function demLai(){
+    var n = 0;
+    oS.forEach(function(o){ if(o.checked){ n++; } });
+    dem.textContent = n + '/' + oS.length + ' xong';
+  }
+  oS.forEach(function(o){
+    if(luu[o.dataset.k]){ o.checked = true; }
+    o.addEventListener('change', function(){
+      luu[o.dataset.k] = o.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(luu)); } catch(e){}
+      demLai();
+    });
+  });
+  demLai();
+  document.getElementById('xoatick').addEventListener('click', function(){
+    oS.forEach(function(o){ o.checked = false; });
+    luu = {};
+    try { localStorage.removeItem(KEY); } catch(e){}
+    demLai();
+  });
+})();
+</script>
+
+</body>
+</html>
